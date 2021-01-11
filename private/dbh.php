@@ -5,6 +5,6 @@ $username = "root";
 $password = "";
 $db = "happyplace";
 
-$conn = new mysqli($dbServername, $dbUsername, $dbPwd, $dbName)
+$conn = new mysqli($servername, $username, $password, $db)
 
 ?>
