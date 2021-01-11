@@ -14,5 +14,5 @@
 </body>
 </html>
 <?php 
- TEST
+ //note for github link https://github.com/dlanaras/private-testing.git
 ?>
