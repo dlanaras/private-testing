@@ -1,3 +1,7 @@
+<?php
+    include_once './private/dbh.php';
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -10,5 +14,5 @@
 </body>
 </html>
 <?php 
-echo "1234";
+
 ?>
