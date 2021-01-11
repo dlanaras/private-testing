@@ -10,9 +10,17 @@
     <title>map</title>
 </head>
 <body>
-
-</body>
-</html>
 <?php 
+    $sql = "SELECT * FROM apprentices;";
+    $results = mysqli_query($conn, $sql);
+    $check = mysqli_num_rows($results);
+
+    if ($results > 0) {
+        while ($row = mysqli_fetch_assoc($results)) {
+            echo $row['prename' AND 'lastname'] . "<br>";
+        }
+    }
  //note for github link https://github.com/dlanaras/private-testing.git
 ?>
+</body>
+</html>

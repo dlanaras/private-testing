@@ -1,10 +1,10 @@
 <?php 
 
-$dbservername = "localhost";
-$dbusername = "root";
-$dbpwd = "";
-$dbName = "yougle";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db = "happyplace";
 
-$conn = mysqli_connect($dbServername,$dbUsername,$dbPwd,$dbName)
+$conn = new mysqli($dbServername, $dbUsername, $dbPwd, $dbName)
 
 ?>
