@@ -14,7 +14,7 @@
 </head>
 <body>
 <div id="button"> 
-    <button type="button" onclick="alert('Gespeicherte Personen können nur vom Admin entfernt werden. Falls Sie Ihre Eingaben falsch eingegeben haben, und Sie diese abändern wollen, können Sie mir an die E-mail: dimitrislanaras04@outlook.com kontaktieren.')"><a href="register.php" target="_blank">Register</a></button>
+    <button type="button" onclick="alert('Gespeicherte Personen können nur vom Admin entfernt werden. Falls Sie Ihre Eingaben falsch eingegeben haben, und Sie diese abändern wollen, können Sie mir an die E-mail: dimitrislanaras04@outlook.com kontaktieren.')"><a href="register.php" >Register</a></button>
 </div>
 <div id="map" class="map">
     <script type="text/javascript">
