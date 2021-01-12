@@ -5,10 +5,11 @@
     $lastname = $_POST['lastname'];
     $longitude = $_POST['longitude'];
     $latitude = $_POST['latitude'];
+    $plcName = $_POST['plcName'];
 
-    $apprSQL = "INSERT INTO apprentices (prename, lastname, place_id, markers_id) VALUES ('$prename', '$lastname', '3', '3');";
-    //$placSQL = "INSERT INTO places (name, latitude, longitude) VALUES ('4', 'Staefa','4','4');";
+    $apprSQL = "INSERT INTO apprentices (prename, lastname, place_id, markers_id) VALUES ('$prename', '$lastname', '1', '2');";
+    $placSQL = "INSERT INTO places (latitude, longitude) VALUES ('$plcName', '$latitude','$longitude');";
     mysqli_query($conn, $apprSQL); 
-    
+    mysqli_query($conn, $placSQL);
     header ("Location: ../index.php?submit=success")
     ?>
