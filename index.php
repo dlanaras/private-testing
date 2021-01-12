@@ -48,28 +48,28 @@
           zoom: 10
         })
       });
-      function add_map_point(lng, lat) {
-            /*let lat = <?php //echo "json_encode($lat_js)";
-                        ?>;
-            let lng = <?php //echo "json_encode($lon_js)";
-                        ?>;*/
-            var vectorLayer = new ol.layer.Vector({
-                source: new ol.source.Vector({
-                    features: [new ol.Feature({
-                        geometry: new ol.geom.Point(ol.proj.transform([parseFloat(lng), parseFloat(lat)], 'EPSG:4326', 'EPSG:3857')),
-                    })]
-                }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon({
-                        anchor: [0.5, 0.5],
-                        anchorXUnits: "fraction",
-                        anchorYUnits: "fraction",
-                        src: "./Bilder/pin.png"
-                    })
-                })
-            });
-            map.addLayer(vectorLayer);
-        }
+function add_map_point(lng, lat) {
+      var vectorLayer = new ol.layer.Vector({
+        source: new ol.source.Vector({
+          features: [new ol.Feature({
+            geometry: new ol.geom.Point(ol.proj.transform([parseFloat(lng), parseFloat(lat)], 'EPSG:4326', 'EPSG:3857')),
+          })]
+        }),
+        style: new ol.style.Style({
+          image: new ol.style.Icon({
+            anchor: [0.5, 0.5],
+            anchorXUnits: "fraction",
+            anchorYUnits: "fraction",
+            src: "https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg"
+          })
+        })
+      });
+      map.setView(new ol.View({
+        center: ol.proj.transform([lng, lat], 'EPSG:4326', 'EPSG:3857'),
+        zoom: 10
+      }));
+      map.addLayer(vectorLayer);
+    }
     </script>
 </div>
 <?php 
@@ -89,6 +89,10 @@
         }
     }*/
  //note for github link https://github.com/dlanaras/private-testing.git
+    echo "
+            <script type='text/javascript'>
+                add_map_point(" . $row->longitude . ", " . $row->latitude . ");
+            </script>";
 ?>
 </body>
 </html>
