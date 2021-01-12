@@ -1,3 +1,8 @@
+
+<?php
+    include_once './private/dbh.php';
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -11,6 +16,14 @@
         <br>
         <input type="text" name="lastname" placeholder="Nachname">
         <br>
+        <button>
     </form>
+    <?php
+            $apprSQL = "apprentices INSERT INTO apprentices (id, prename, lastname, place_id, markers_id) VALUES (4, 'Andrew', 'Longitude', '3', '1');";
+            $placSQL = "INSERT INTO places (name, latitude, longitude) VALUES ('4', 'Staefa','4','4');";
+            mysqli_query($conn, $apprSQL);
+            mysqli_query($conn, $placSQL);
+            
+    ?>
 </body>
 </html>

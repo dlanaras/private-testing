@@ -14,7 +14,7 @@
 </head>
 <body>
 <div id="button"> 
-    <button type="button" onclick="alert('Gespeicherte Personen können nur vom Admin entfernt werden. Falls Sie Ihre Eingaben falsch eingegeben haben, und Sie diese abändern wollen, können Sie mir an die E-mail: dimitrislanaras04@outlook.com kontaktieren.')"><a href="register.php" target="_blank">Click Me!</a></button>
+    <button type="button" onclick="alert('Gespeicherte Personen können nur vom Admin entfernt werden. Falls Sie Ihre Eingaben falsch eingegeben haben, und Sie diese abändern wollen, können Sie mir an die E-mail: dimitrislanaras04@outlook.com kontaktieren.')"><a href="register.php" target="_blank">Register</a></button>
 </div>
 <div id="map" class="map">
     <script type="text/javascript">
@@ -51,16 +51,21 @@
     </script>
 </div>
 <?php 
+    //$sql = "SELECT * FROM apprentices; JOIN places ON place_id = id; JOIN markers ON markers_id";
 
-    $sql = "SELECT * FROM apprentices;";
-    $results = mysqli_query($conn, $sql);
-    $check = mysqli_num_rows($results);
+    $apprSQL = "SELECT * FROM apprentices;";
+    $placSQL = "SELECT * FROM places;";
+    $apprResults = mysqli_query($conn, $apprSQL);
+    $placResults = mysqli_query($conn, $placSQL);
+    /* $apprCheck = mysqli_num_rows($apprResults);
+    $placCheck = mysqli_num_rows ($placResults);
 
-    if ($check > 0) {
-        while ($row = mysqli_fetch_assoc($results)) {
-            echo $row['prename'] . "<br>" . $row['lastname'] . "<br>" ;
+
+    if ($apprCheck AND $placCheck > 0) {
+        while ($apprRow = mysqli_fetch_assoc($apprResults) AND $placRow = mysqli_fetch_assoc($placResults)) {
+            echo $apprRow['prename'] . "<br>" . $apprRow['lastname'] . "<br>" . $placRow['name'] . "<br>" . $placRow['latitude'] ."<br>" . $placRow['longitude'] . "<br>";
         }
-    }
+    }*/
  //note for github link https://github.com/dlanaras/private-testing.git
 ?>
 </body>
