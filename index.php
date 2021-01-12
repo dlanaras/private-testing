@@ -48,6 +48,28 @@
           zoom: 10
         })
       });
+      function add_map_point(lng, lat) {
+            /*let lat = <?php //echo "json_encode($lat_js)";
+                        ?>;
+            let lng = <?php //echo "json_encode($lon_js)";
+                        ?>;*/
+            var vectorLayer = new ol.layer.Vector({
+                source: new ol.source.Vector({
+                    features: [new ol.Feature({
+                        geometry: new ol.geom.Point(ol.proj.transform([parseFloat(lng), parseFloat(lat)], 'EPSG:4326', 'EPSG:3857')),
+                    })]
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon({
+                        anchor: [0.5, 0.5],
+                        anchorXUnits: "fraction",
+                        anchorYUnits: "fraction",
+                        src: "./Bilder/pin.png"
+                    })
+                })
+            });
+            map.addLayer(vectorLayer);
+        }
     </script>
 </div>
 <?php 
