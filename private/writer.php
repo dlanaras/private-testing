@@ -7,6 +7,7 @@
     $latitude = $_POST['latitude'];
     $plcName = $_POST['plcName'];
 
+    if(isset($_POST['submit']))
     $idcount = "SELECT COUNT(id) as countid FROM apprentices";
     $results = $conn->query($idcount);
     $row = $results->fetch_assoc();
