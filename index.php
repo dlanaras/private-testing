@@ -60,7 +60,7 @@ function add_map_point(lng, lat) {
             anchor: [0.5, 0.5],
             anchorXUnits: "fraction",
             anchorYUnits: "fraction",
-            src: "https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg"
+            src: "https://upload.wikimedia.org/wikipedia/commons/5/57/Gwiazda_DA.svg"
           })
         })
       });
@@ -70,29 +70,31 @@ function add_map_point(lng, lat) {
       }));
       map.addLayer(vectorLayer);
     }
+
+
     </script>
 </div>
 <?php 
     //$sql = "SELECT * FROM apprentices; JOIN places ON place_id = id; JOIN markers ON markers_id";
 
-    $apprSQL = "SELECT * FROM apprentices;";
+    //$apprSQL = "SELECT * FROM apprentices;";
     $placSQL = "SELECT * FROM places;";
-    $apprResults = mysqli_query($conn, $apprSQL);
+    //$apprResults = mysqli_query($conn, $apprSQL);
     $placResults = mysqli_query($conn, $placSQL);
-    /* $apprCheck = mysqli_num_rows($apprResults);
+    //$apprCheck = mysqli_num_rows($apprResults);
     $placCheck = mysqli_num_rows ($placResults);
 
 
-    if ($apprCheck AND $placCheck > 0) {
-        while ($apprRow = mysqli_fetch_assoc($apprResults) AND $placRow = mysqli_fetch_assoc($placResults)) {
-            echo $apprRow['prename'] . "<br>" . $apprRow['lastname'] . "<br>" . $placRow['name'] . "<br>" . $placRow['latitude'] ."<br>" . $placRow['longitude'] . "<br>";
-        }
-    }*/
- //note for github link https://github.com/dlanaras/private-testing.git
-    echo "
+    if ($placCheck > 0) {
+        while ($placRow = mysqli_fetch_assoc($placResults)) {
+            echo "
             <script type='text/javascript'>
-                add_map_point(" . $row->longitude . ", " . $row->latitude . ");
+                add_map_point(" . $placRow['longitude'] . ", " . $placRow['latitude'] . ");
             </script>";
+        }
+    }
+ //note for github link https://github.com/dlanaras/private-testing.git
+
 ?>
 </body>
 </html>
