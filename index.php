@@ -63,7 +63,7 @@ function add_map_point(lng, lat) {
             src: "https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg"
           })
         })
-      });
+      }); 
       map.setView(new ol.View({
         center: ol.proj.transform([lng, lat], 'EPSG:4326', 'EPSG:3857'),
         zoom: 10
@@ -80,7 +80,8 @@ function add_map_point(lng, lat) {
     $apprResults = mysqli_query($conn, $apprSQL);
     $placResults = mysqli_query($conn, $placSQL);
     /* $apprCheck = mysqli_num_rows($apprResults);
-    $placCheck = mysqli_num_rows ($placResults);
+    $placCheck y= mysqli_num_rows ($placResults);
+    //test
 
 
     if ($apprCheck AND $placCheck > 0) {
