@@ -25,15 +25,14 @@
     <div>
     <h1>Enter your creditentials</h1>
     </div>
-    <div id="map" class="map"></div>
     <form method="POST" action="gotoCRUD.php">
     <div>
         <label for="username">Benutzername</label>
-        <input id="username" name="usename" />
+        <input type="username" id="username" name="username" />
     </div>
     <div>
         <label for="password">Passwort</label>
-        <input type="password" id="password" name="lat" />
+        <input type="password" id="password" name="password" />
     </div>
     <button type="submit">login</button>
     </form>
