@@ -1,5 +1,8 @@
 <?php
-    include_once 'dbh.php';
+    require_once 'databankconn.php';
+
+
+    $database = new Database("localhost", "root", "", "happyplace");
     
     if(isset($_POST['submit'])) {
     $prename = $_POST['prename'];
@@ -27,5 +30,4 @@
 
     header ("Location: ../index.php?submit=success");
     }
-    ?>
-
+?>
