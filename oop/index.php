@@ -23,6 +23,7 @@ require_once "data.php";
       padding: 1rem;
       top: 0;
       right: 0;
+      background-color: rgba(200,200,200,0.75);
     }
 
     input {
@@ -36,7 +37,7 @@ require_once "data.php";
     }
   </style>
   <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
-  <title>ol example</title>
+  <title>project happy place Dimitrios</title>
 </head>
 
 <body>
