@@ -1,5 +1,5 @@
 <?php
-include_once("private/dbh.php");
+include_once("private/databankconn.php");
 
 
 if (isset($_POST['submit'])) {

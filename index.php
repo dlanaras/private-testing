@@ -1,6 +1,8 @@
 <?php
-    include_once './private/dbh.php';
+    require_once './private/databankconn.php';
+    $database = new Database("localhost", "root", "", "happyplace");
 ?>
+
 
 <!DOCTYPE html>
 <html lang="de">
@@ -77,13 +79,14 @@ function add_map_point(lng, lat) {
 
     </script>
 </div>
-<?php 
+<?php /*
+
     //$sql = "SELECT * FROM apprentices; JOIN places ON place_id = id; JOIN markers ON markers_id";
 
     //$apprSQL = "SELECT * FROM apprentices;";
     $placSQL = "SELECT * FROM places;";
     //$apprResults = mysqli_query($conn, $apprSQL); 
-    $placResults = mysqli_query($conn, $placSQL);
+    $placResults = mysqli_query($connection, $placSQL);
     //$apprCheck = mysqli_num_rows($apprResults);
     $placCheck = mysqli_num_rows ($placResults);
 
@@ -97,7 +100,7 @@ function add_map_point(lng, lat) {
         }
     }
  //note for github link https://github.com/dlanaras/private-testing.git
-
+*/
 ?>
 </body>
 </html>
