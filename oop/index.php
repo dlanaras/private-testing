@@ -18,6 +18,12 @@ require_once "data.php";
       width: 100%;
     }
 
+    .login {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
     form {
       position: absolute;
       padding: 1rem;
@@ -57,6 +63,9 @@ require_once "data.php";
     </div>
     <button type="submit">Add Marker</button>
   </form>
+
+  <button class="login" action="./login.php" target="_blank">Login</button>
+
   <script type="text/javascript">
     var markerPoints = [<?php
                         foreach ($markers as $marker) {

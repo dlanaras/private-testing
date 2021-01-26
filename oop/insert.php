@@ -7,4 +7,4 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['lat']) && isset($_REQUEST['lng'
   $newMarker->create($connection);
 }
 
-header('Location: http://localhost/new/private-testing/oop/index.php');
+header('Location: http://localhost/new/private-testing/oop/index.php?succesful');
