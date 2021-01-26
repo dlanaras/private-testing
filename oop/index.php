@@ -64,8 +64,7 @@ require_once "data.php";
     <button type="submit">Add Marker</button>
   </form>
 
-  <button class="login" action="./login.php" target="_blank">Login</button>
-
+  <a href="./login.php" target="_blank"><button class="login" >Login as admin</button></a>
   <script type="text/javascript">
     var markerPoints = [<?php
                         foreach ($markers as $marker) {
