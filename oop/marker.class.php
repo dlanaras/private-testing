@@ -27,7 +27,7 @@ class Marker
 
   public function create($connection)
   {
-    $name = $connection->real_escape_string($this->$name);
+    $name = $connection->real_escape_string($this->name);
     $lat = $connection->real_escape_string($this->lat);
     $lng = $connection->real_escape_string($this->lng);
     $sql = "INSERT INTO `places` (name, lat, lng) VALUES ('$name', '$lat', '$lng');";

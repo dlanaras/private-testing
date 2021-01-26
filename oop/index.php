@@ -43,6 +43,10 @@ require_once "data.php";
   <div id="map" class="map"></div>
   <form method="POST" action="insert.php">
     <div>
+      <label for="name">Ort</label>
+      <input id="name" name="name" />
+    </div>
+    <div>
       <label for="lat">Latitude</label>
       <input id="lat" name="lat" />
     </div>
