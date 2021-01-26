@@ -7,6 +7,7 @@
     <style>
 
     .bg {
+        /* I know that this looks horibble */
         background: url("https://images.cdn2.stockunlimited.net/preview1300/lock-icon_2002024.jpg") no-repeat center;
     }
 
@@ -25,14 +26,14 @@
     <h1>Enter your creditentials</h1>
     </div>
     <div id="map" class="map"></div>
-    <form method="POST" action="insertToCrud.php">
+    <form method="POST" action="gotoCRUD.php">
     <div>
         <label for="username">Benutzername</label>
         <input id="username" name="usename" />
     </div>
     <div>
         <label for="password">Passwort</label>
-        <input id="password" name="lat" />
+        <input type="password" id="password" name="lat" />
     </div>
     <button type="submit">login</button>
     </form>
