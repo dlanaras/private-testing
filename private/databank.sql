@@ -24,10 +24,10 @@ USE `happyplace` ;
 DROP TABLE IF EXISTS `happyplace`.`places` ;
 
 CREATE TABLE IF NOT EXISTS `happyplace`.`places` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
-  `latitude` VARCHAR(255) NULL,
-  `longitude` VARCHAR(255) NULL,
+  `lat` VARCHAR(255) NULL,
+  `lng` VARCHAR(255) NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `name_UNIQUE` (`name` ASC))
 ENGINE = InnoDB;
