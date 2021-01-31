@@ -118,7 +118,7 @@ class Entity
   public function delete($id)
   {
     try {
-      $statement = $this->connection->prepare("DELETE * FROM " . $this->table . " WHERE id=?");
+      $statement = $this->connection->prepare("DELETE FROM " . $this->table . " WHERE id=?");
       $statement->bind_param('d', $id);
       $result = $statement->execute();
       $statement->close();
